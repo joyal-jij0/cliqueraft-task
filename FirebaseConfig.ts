@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDlyvS1eIRccuVIQnxi8SSnx_2vDW6Nq8k",
-    authDomain: "clique-raft.firebaseapp.com",
-    projectId: "clique-raft",
-    storageBucket: "clique-raft.appspot.com",
-    messagingSenderId: "120293268568",
-    appId: "1:120293268568:web:94652aab2a08cd8c443e2d",
+    apiKey: process.env.EXPO_PUBLIC_FB_API_KEY,
+    authDomain: process.env.EXPO_PUBLIC_FB_AUTH_DOMAIN,
+    projectId: process.env.EXPO_PUBLIC_FB_PROJECT_ID,
+    storageBucket: process.env.EXPO_PUBLIC_FB_STORAGE_BUCKET,
+    messagingSenderId: process.env.EXPO_PUBLIC_FB_MESSAGING_SENDER_ID,
+    appId: process.env.EXPO_PUBLIC_FB_APP_ID,
 };
 
 export const FIREBASE_APP = initializeApp(firebaseConfig);
